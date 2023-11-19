@@ -20,12 +20,8 @@ body {
 }
 
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 header {
@@ -83,17 +79,20 @@ nav ul li a:hover {
   color: #808080;
 }
 
-.content-wrapper {
-  text-align: center;
+.form-wrapper {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 
 footer {
   background-color: #363636;
   color: #808080;
   text-align: center;
+  padding: 1.5rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -105,7 +104,6 @@ footer p {
 }
 
 .form-group {
-  margin-top: 100px;
   margin-bottom: 20px;
 }
 
