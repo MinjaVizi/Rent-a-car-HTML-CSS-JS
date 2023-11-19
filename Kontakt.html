@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent a Car</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="naslov">Rent a car</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Početna</a></li>
+        <li><a href="Automobili.html">Automobili</a></li>
+        <li><a href="Rezervacija.html">Rezervacija</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <main>
+        <form id="contact-form" onsubmit="event.preventDefault(); showAlert();">
+          <div class="form-group">
+            <label for="email">Vaš Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Poruka:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Pošalji</button>
+        </form>
+      </main>
+      
+
+
+
+  <footer>
+  <p>&copy; 2023 Rent a Car</p>
+</footer>
+
+<script src="JS/main.js"></script>
+
+</body>
+</html>
