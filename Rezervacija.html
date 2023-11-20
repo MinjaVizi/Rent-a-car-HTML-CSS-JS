@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,8 @@
 </head>
 <body>
     <img src="images/automobili.png" alt="pozadina" class="pozadina">
-
   <header>
-    <h1 class="naslov">Rent a car</h1>
+    <h1 class="naslov">Rent a Car</h1>
     <nav>
       <ul>
         <li><a href="Index.html">Početna</a></li>
@@ -21,31 +20,31 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <div class="form-wrapper">
       <form id="reservation-form">
+        <div class="form-group">
+          <label for="car-select">Izaberite automobil:</label>
+          <select id="car-select" name="car-select">
+            <option value="audi-a4-50">Audi A4 - 50€/dan</option>
+            <option value="vw-golf-45">Volkswagen Golf - 45€/dan</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="date-range">Datum iznajmljivanja:</label>
           <input type="text" id="date-range" name="date-range" readonly>
         </div>
         <div class="form-group">
-          <label for="delivery">Da li želite dostavu vozila na željenu adresu?</label>
+          <label for="delivery">Da li želite dostavu vozila?</label>
           <input type="checkbox" id="delivery" name="delivery">
         </div>
-        <div class="form-group">
-          <label for="total-price">Ukupna cena:</label>
-          <input type="text" id="total-price" name="total-price" readonly>
-        </div>
-        <button type="button" onclick="reserve()">Rezerviši</button>
+        <button type="button" id="reserve-button">Rezerviši</button>
       </form>
     </div>
   </main>
-
   <footer>
     <p>&copy; 2023 Rent a Car</p>
   </footer>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="JS/main.js"></script>

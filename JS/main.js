@@ -68,4 +68,22 @@ document.addEventListener('DOMContentLoaded', function () {
       // Logika za sortiranje po godištu
     });
   });
+
+  $(function () {
+    $("#date-range").datepicker({
+      minDate: +5, // Reservation at least 5 days in advance
+      dateFormat: "dd-mm-yy"
+    });
+  
+    $('#reserve-button').click(function() {
+      var car = $('#car-select').find('option:selected').text();
+      var date = $('#date-range').val();
+      var delivery = $('#delivery').is(':checked') ? 'with delivery' : 'without delivery';
+      if(date) {
+        alert('Car ' + car + ' successfully reserved for ' + date + ' ' + delivery + '.');
+      } else {
+        alert('Please select a date.');
+      }
+    });
+  });
   
