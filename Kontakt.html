@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <img src="images/automobili.png" alt="pozadina" class="pozadina">
+
   <header>
     <h1 class="naslov">Rent a car</h1>
     <nav>
@@ -20,18 +23,27 @@
   </header>
 
   <main>
-    <div class="form-wrapper">
-      <form id="contact-form" onsubmit="event.preventDefault(); showAlert();">
-        <div class="form-group">
-          <label for="email">Vaš Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Poruka:</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Pošalji</button>
-      </form>
+    <div class="content-container">
+      <div class="form-wrapper">
+        <form id="contact-form" onsubmit="event.preventDefault(); showAlert();">
+          <div class="form-group">
+            <label for="name">Ime:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Vaš Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Poruka:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Pošalji</button>
+        </form>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22646.32606290144!2d20.377807112957818!3d44.805452761132706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a656f9dea142f%3A0x7517ef90e3936203!2sRent%20a%20Car%20Beograd%2C%20iznajmljivanje%20automobila%2C%20Grand%20Mobile!5e0!3m2!1ssr!2srs!4v1700483468232!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </main>
 
