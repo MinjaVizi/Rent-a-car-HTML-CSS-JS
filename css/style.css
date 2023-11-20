@@ -239,3 +239,100 @@ color: #2e2e2e;
 background-color: #808080;
 
 }
+
+@media (max-width: 992px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .form-wrapper,
+  .map-container {
+    max-width: 100%;
+  }
+
+  .car-card {
+    width: calc(50% - 20px); /* Dva automobila u redu */
+  }
+}
+
+/* Responzivnost za male tablete i velike telefone */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .car-card {
+    width: 100%; /* Jedan automobil u redu */
+  }
+
+  .form-wrapper,
+  .map-container {
+    padding: 1rem;
+  }
+}
+
+/* Responzivnost za male telefone */
+@media (max-width: 576px) {
+  header, nav {
+    flex-direction: column;
+  }
+
+  .nav ul {
+    width: 100%;
+  }
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .filters-container select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-wrapper {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+
+  .car-card {
+    padding: 10px;
+  }
+
+  footer {
+    height: auto;
+    padding: 10px;
+  }
+}
+
+/* Stilovi za veoma male ekrane */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  header, nav {
+    padding: 10px 0;
+  }
+
+  .nav ul {
+    gap: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  input[type=email], input[type=text], textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 10px;
+  }
+
+  .content-container {
+    padding: 10px;
+  }
+}

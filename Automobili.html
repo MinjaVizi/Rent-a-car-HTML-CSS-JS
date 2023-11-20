@@ -30,71 +30,21 @@
         <option value="diesel">Dizel</option>
       </select>
   
-      <label for="sort-price">Sortiraj po ceni:</label>
+      <label for="sort-price"></label>
       <select id="sort-price" name="sort-price">
-        <option value="ascending">Uzlazno</option>
-        <option value="descending">Silazno</option>
+        <option value="ascending">Cena - uzlazno</option>
+        <option value="descending">Cena - silazno</option>
       </select>
   
-      <label for="sort-year">Sortiraj po godištu:</label>
+      <label for="sort-year"></label>
       <select id="sort-year" name="sort-year">
-        <option value="ascending">Uzlazno</option>
-        <option value="descending">Silazno</option>
+        <option value="ascending">Godište - uzlazno</option>
+        <option value="descending">Godište - silazno</option>
       </select>
     </div>
     <section class="car-cards-container">
-      <!-- Audi A4 -->
-      <article class="car-card">
-        <img src="images/a4.png" alt="Audi A4">
-        <h2>Audi A4</h2>
-        <p>Cena: 50€/dan</p>
-        <p>Gorivo: Benzin</p>
-        <p>Menjač: Automatski</p>
-        <p>Godište: 2020</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Audi A6 -->
-      <article class="car-card">
-        <img src="images/A6.png" alt="Audi A6">
-        <h2>Audi A6</h2>
-        <p>Cena: 60€/dan</p>
-        <p>Gorivo: Dizel</p>
-        <p>Menjač: Manuelni</p>
-        <p>Godište: 2019</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Audi Q5 -->
-      <article class="car-card">
-        <img src="images/Q5.png" alt="Audi Q5">
-        <h2>Audi Q5</h2>
-        <p>Cena: 70€/dan</p>
-        <p>Gorivo: Benzin</p>
-        <p>Menjač: Automatski</p>
-        <p>Godište: 2021</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Volkswagen Golf -->
-      <article class="car-card">
-        <img src="images/vwGolf.png" alt="Volkswagen Golf">
-        <h2>Volkswagen Golf</h2>
-        <p>Cena: 45€/dan</p>
-        <p>Gorivo: Dizel</p>
-        <p>Menjač: Manuelni</p>
-        <p>Godište: 2017</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Volkswagen Passat -->
-      <article class="car-card">
-        <img src="images/vwPasat.png" alt="Volkswagen Passat">
-        <h2>Volkswagen Passat</h2>
-        <p>Cena: 55€/dan</p>
-        <p>Gorivo: Benzin</p>
-        <p>Menjač: Automatski</p>
-        <p>Godište: 2019</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Volkswagen Polo -->
-      <article class="car-card">
+         <!-- Volkswagen Polo -->
+      <article class="car-card" data-price="35" data-year="2016" data-fuel="petrol">
         <img src="images/vwPolo.png" alt="Volkswagen Polo">
         <h2>Volkswagen Polo</h2>
         <p>Cena: 35€/dan</p>
@@ -103,28 +53,8 @@
         <p>Godište: 2016</p>
         <p>Dostava: Da</p>
       </article>
-      <!-- Volkswagen Tiguan -->
-      <article class="car-card">
-        <img src="images/vwTiguan.png" alt="Volkswagen Tiguan">
-        <h2>Volkswagen Tiguan</h2>
-        <p>Cena: 65€/dan</p>
-        <p>Gorivo: Dizel</p>
-        <p>Menjač: Automatski</p>
-        <p>Godište: 2020</p>
-        <p>Dostava: Da</p>
-      </article>
-      <!-- Volkswagen Touareg -->
-      <article class="car-card">
-        <img src="images/vwTouareg.png" alt="Volkswagen Touareg">
-        <h2>Volkswagen Touareg</h2>
-        <p>Cena: 90€/dan</p>
-        <p>Gorivo: Dizel</p>
-        <p>Menjač: Automatski</p>
-        <p>Godište: 2021</p>
-        <p>Dostava: Da</p>
-      </article>
       <!-- Audi A3 -->
-      <article class="car-card">
+      <article class="car-card" data-price="40" data-year="2018" data-fuel="diesel">
         <img src="images/A3.png" alt="Audi A3">
         <h2>Audi A3</h2>
         <p>Cena: 40€/dan</p>
@@ -133,14 +63,89 @@
         <p>Godište: 2018</p>
         <p>Dostava: Da</p>
       </article>
+        <!-- Volkswagen Golf -->
+      <article class="car-card" data-price="45" data-year="2017" data-fuel="diesel">
+        <img src="images/vwGolf.png" alt="Volkswagen Golf">
+        <h2>Volkswagen Golf</h2>
+        <p>Cena: 45€/dan</p>
+        <p>Gorivo: Dizel</p>
+        <p>Menjač: Manuelni</p>
+        <p>Godište: 2017</p>
+        <p>Dostava: Da</p>
+      </article>
+      <!-- Audi A4 -->
+      <article class="car-card" data-price="50" data-year="2020" data-fuel="petrol">
+        <img src="images/a4.png" alt="Audi A4">
+        <h2>Audi A4</h2>
+        <p>Cena: 50€/dan</p>
+        <p>Gorivo: Benzin</p>
+        <p>Menjač: Automatski</p>
+        <p>Godište: 2020</p>
+        <p>Dostava: Da</p>
+      </article>
+        <!-- Volkswagen Passat -->
+        <article class="car-card" data-price="55" data-year="2019" data-fuel="petrol">
+            <img src="images/vwPasat.png" alt="Volkswagen Passat">
+            <h2>Volkswagen Passat</h2>
+            <p>Cena: 55€/dan</p>
+            <p>Gorivo: Benzin</p>
+            <p>Menjač: Automatski</p>
+            <p>Godište: 2019</p>
+            <p>Dostava: Da</p>
+          </article>
+
+          
+      <!-- Audi A6 -->
+      <article class="car-card" data-price="60" data-year="2019" data-fuel="diesel">
+        <img src="images/A6.png" alt="Audi A6">
+        <h2>Audi A6</h2>
+        <p>Cena: 60€/dan</p>
+        <p>Gorivo: Dizel</p>
+        <p>Menjač: Manuelni</p>
+        <p>Godište: 2019</p>
+        <p>Dostava: Da</p>
+      </article>
+
+        <!-- Volkswagen Tiguan -->
+        <article class="car-card" data-price="65" data-year="2020" data-fuel="diesel">
+            <img src="images/vwTiguan.png" alt="Volkswagen Tiguan">
+            <h2>Volkswagen Tiguan</h2>
+            <p>Cena: 65€/dan</p>
+            <p>Gorivo: Dizel</p>
+            <p>Menjač: Automatski</p>
+            <p>Godište: 2020</p>
+            <p>Dostava: Da</p>
+          </article>
+          
+      <!-- Audi Q5 -->
+      <article class="car-card" data-price="70" data-year="2021" data-fuel="petrol">
+        <img src="images/Q5.png" alt="Audi Q5">
+        <h2>Audi Q5</h2>
+        <p>Cena: 70€/dan</p>
+        <p>Gorivo: Benzin</p>
+        <p>Menjač: Automatski</p>
+        <p>Godište: 2021</p>
+        <p>Dostava: Da</p>
+      </article>
+      
       <!-- Audi TT -->
-      <article class="car-card">
+      <article class="car-card" data-price="80" data-year="2022" data-fuel="petrol">
         <img src="images/TT.png" alt="Audi TT">
         <h2>Audi TT</h2>
         <p>Cena: 80€/dan</p>
         <p>Gorivo: Benzin</p>
         <p>Menjač: Automatski</p>
         <p>Godište: 2022</p>
+        <p>Dostava: Da</p>
+      </article>
+      <!-- Volkswagen Touareg -->
+      <article class="car-card" data-price="90" data-year="2021" data-fuel="diesel">
+        <img src="images/vwTouareg.png" alt="Volkswagen Touareg">
+        <h2>Volkswagen Touareg</h2>
+        <p>Cena: 90€/dan</p>
+        <p>Gorivo: Dizel</p>
+        <p>Menjač: Automatski</p>
+        <p>Godište: 2021</p>
         <p>Dostava: Da</p>
       </article>
     </section>

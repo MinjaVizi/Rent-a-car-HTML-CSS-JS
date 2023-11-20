@@ -1,14 +1,19 @@
-// Funkcija koja vraća cenu po danu na osnovu izabranog automobila
 function getPricePerDay(carValue) {
     const prices = {
       'audi-a4-50': 50,
       'audi-a6-60': 60,
-      // ... ostali automobili ...
+      'audi-q5-70': 70,
+      'vw-golf-45': 45,
+      'vw-passat-55': 55,
+      'vw-polo-35': 35,
+      'vw-tiguan-65': 65,
+      'vw-touareg-90': 90,
+      'audi-a3-40': 40,
+      'audi-tt-80': 80
     };
     return prices[carValue] || 0;
   }
   
-  // Funkcija koja ažurira ukupnu cenu
   function updateTotal() {
     const carSelect = document.getElementById('car-select');
     const dayInput = document.getElementById('day');
@@ -19,7 +24,6 @@ function getPricePerDay(carValue) {
     totalPriceDisplay.textContent = totalPrice.toFixed(2) + ' EUR';
   }
   
-  // Funkcija koja se poziva kada se promeni broj dana
   function changeDays(increment) {
     const dayInput = document.getElementById('day');
     let days = parseInt(dayInput.value, 10);
@@ -29,17 +33,42 @@ function getPricePerDay(carValue) {
     updateTotal();
   }
   
-  document.addEventListener('DOMContentLoaded', function () {
-    // Postavljanje minimalnog datuma na danas
-    document.getElementById('date').min = new Date().toISOString().split('T')[0];
+  function applyFilters() {
+    const fuelType = document.getElementById('fuel-type').value;
+    const sortPrice = document.getElementById('sort-price').value;
+    const sortYear = document.getElementById('sort-year').value;
+    let cars = Array.from(document.getElementsByClassName('car-card'));
+    cars.forEach(car => car.style.display = '');
+    if (fuelType !== 'all') {
+      cars = cars.filter(car => car.dataset.fuel === fuelType);
+    }
+    if (sortPrice !== 'default') {
+      cars.sort((a, b) => sortPrice === 'ascending' ? a.dataset.price - b.dataset.price : b.dataset.price - a.dataset.price);
+    }
+    if (sortYear !== 'default') {
+      cars.sort((a, b) => sortYear === 'ascending' ? a.dataset.year - b.dataset.year : b.dataset.year - a.dataset.year);
+    }
+    const container = document.querySelector('.car-cards-container');
+    container.innerHTML = '';
+    cars.forEach(car => container.appendChild(car));
+  }
   
-    // Event listeneri
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('date').min = new Date().toISOString().split('T')[0];
     document.getElementById('car-select').addEventListener('change', updateTotal);
     document.getElementById('increment').addEventListener('click', function() { changeDays(true); });
     document.getElementById('decrement').addEventListener('click', function() { changeDays(false); });
     document.getElementById('day').addEventListener('change', updateTotal);
-  
-    // Inicijalno ažuriranje cene
     updateTotal();
+    applyFilters();
+    
+    document.querySelectorAll('button[type="submit"]').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.target.form.reset();
+        updateTotal();
+        applyFilters();
+      });
+    });
   });
   
