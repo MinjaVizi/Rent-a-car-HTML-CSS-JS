@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rent a Car - Rezervacija</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
-    <img src="images/automobili.png" alt="pozadina" class="pozadina">
-  <header>
+    <header>
     <h1 class="naslov">Rent a Car</h1>
     <nav>
       <ul>
@@ -27,26 +25,44 @@
           <label for="car-select">Izaberite automobil:</label>
           <select id="car-select" name="car-select">
             <option value="audi-a4-50">Audi A4 - 50€/dan</option>
+            <option value="audi-a6-60">Audi A6 - 60€/dan</option>
+            <option value="audi-q5-70">Audi Q5 - 70€/dan</option>
             <option value="vw-golf-45">Volkswagen Golf - 45€/dan</option>
+            <option value="vw-passat-55">Volkswagen Passat - 55€/dan</option>
+            <option value="vw-polo-35">Volkswagen Polo - 35€/dan</option>
+            <option value="vw-tiguan-65">Volkswagen Tiguan - 65€/dan</option>
+            <option value="vw-touareg-90">Volkswagen Touareg - 90€/dan</option>
+            <option value="audi-a3-40">Audi A3 - 40€/dan</option>
+            <option value="audi-tt-80">Audi TT - 80€/dan</option>
           </select>
+
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="date" min="">
         </div>
-        <div class="form-group">
-          <label for="date-range">Datum iznajmljivanja:</label>
-          <input type="text" id="date-range" name="date-range" readonly>
+
+        <div id="day-counter">
+            <button type="button" id="decrement">-</button>
+            <input type="number" id="day" name="day" value="1" min="1" max="20">
+            <button type="button" id="increment">+</button>
         </div>
+
         <div class="form-group">
           <label for="delivery">Da li želite dostavu vozila?</label>
           <input type="checkbox" id="delivery" name="delivery">
         </div>
+
+        <div id="total-container">
+            <p>Ukupno: <span id="total-price">0</span> EUR</p>
+        </div>
+
         <button type="button" id="reserve-button">Rezerviši</button>
       </form>
     </div>
   </main>
+  
   <footer>
     <p>&copy; 2023 Rent a Car</p>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="JS/main.js"></script>
 </body>
 </html>
